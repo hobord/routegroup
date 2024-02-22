@@ -4,7 +4,7 @@ import "net/http"
 
 type Option func(*group)
 
-// WithMux sets the mux for the group.
+// WithMux sets the mux for the group.  (default: http.NewServeMux()
 func WithMux(mux *http.ServeMux) Option {
 	return func(g *group) {
 		g.ServeMux = mux
