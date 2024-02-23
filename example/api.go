@@ -32,7 +32,7 @@ func MakeApi(mux *http.ServeMux) http.Handler {
 	// all middlewares are inherited by sub groups
 	root.Use(routegroup.Logger)
 
-	// it couse a panic becouse path is already registered
+	// it couse a panic because path is already registered
 	// but the registred panic callback will recover the panic
 	root.HandleFunc("GET /{$}", index)
 

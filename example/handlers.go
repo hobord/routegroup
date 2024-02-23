@@ -42,8 +42,6 @@ func AfterMiddleware(h http.Handler) http.Handler {
 	})
 }
 
-
-
 func panicTest(w http.ResponseWriter, r *http.Request) {
 	panic("v any")
 }
