@@ -1,5 +1,8 @@
 # RouteGroup
 
+[![GoDoc](https://godoc.org/github.com/hobord/routegroup?status.svg)](https://godoc.org/github.com/hobord/routegroup)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hobord/routegroup)](https://goreportcard.com/report/github.com/hobord/routegroup)
+
 Small package or snippets for extend http.ServeMux. It adds route grouping feature.
 It helps to organize routes in a better way.
 You can add middlewares to multiple routes at once.
