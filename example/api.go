@@ -22,7 +22,7 @@ func MakeApi(mux *http.ServeMux) http.Handler {
 	)
 
 	// index page handler
-	root.HandleFunc("GET /$", index)
+	root.HandleFunc("GET /{$}", index)
 
 	// You can add middlewares to the group any time
 	// but they are not applied to already registered routes
@@ -34,7 +34,7 @@ func MakeApi(mux *http.ServeMux) http.Handler {
 
 	// it couse a panic becouse path is already registered
 	// but the registred panic callback will recover the panic
-	root.HandleFunc("GET /$", index)
+	root.HandleFunc("GET /{$}", index)
 
 	// hello page handlerFunc with a parameter
 	// and a wraped with middlewares
@@ -58,7 +58,7 @@ func MakeApi(mux *http.ServeMux) http.Handler {
 		group.Use(BeforeMiddleware, AfterMiddleware)
 
 		// group index page handler
-		group.HandleFunc("GET /", index)
+		group.HandleFunc("GET /{$}", index)
 
 		// group hello page handler
 		group.HandleFunc("GET /{name}/", hello)
